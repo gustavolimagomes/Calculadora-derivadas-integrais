@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="710.0" prefWidth="630.0" spacing="15.0" style="-fx-background-color: #363636;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto.Controller">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label text="Função:" textFill="WHITE">
+      <font>
+         <Font name="Century" size="15.0" />
+      </font></Label>
+    <TextField fx:id="inputFunctionField" promptText="Ex: x^2 + 2*x + 1" style="-fx-background-radius: 15;" />
+
+    <Label text="Limite Inferior (a):" textFill="WHITE">
+      <font>
+          <Font name="Century" size="15.0" />
+      </font></Label>
+    <TextField fx:id="lowerLimitField" promptText="Ex: 0" style="-fx-background-radius: 15;" />
+
+    <Label text="Limite Superior (b):" textFill="WHITE">
+      <font>
+         <Font name="Century" size="15.0" />
+      </font></Label>
+    <TextField fx:id="upperLimitField" promptText="Ex: 2" style="-fx-background-radius: 15;" />
+
+    <Button onAction="#onDerivar" style="-fx-background-color: #1E90FF;" text="Derivar" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button onAction="#onIntegralIndefinida" style="-fx-background-color: #1E90FF;" text="Integral Indefinida" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button onAction="#onIntegralDefinida" style="-fx-background-color: #1E90FF;" text="Integral Definida" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+
+    <Label text="Resultado:" />
+    <TextArea fx:id="resultArea" editable="false" prefHeight="335.0" prefWidth="590.0" promptText="Resultado:" style="-fx-border-color: #000000;" wrapText="true" />
+</VBox>
